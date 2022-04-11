@@ -1,0 +1,87 @@
+*{
+    margin: 0%;
+}
+
+body{
+    background: linear-gradient(90deg, black, rgb(52, 0, 95), black);   
+}
+h1{
+    padding: 0.5em;
+    text-align: center;
+    font-family: 'Amita', cursive;
+    font-size: 2em ;
+    color: aliceblue;
+    text-shadow: 1px;
+}
+
+.grid{
+    padding: 0.5em, 0em;
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    grid-template-rows: repeat(6 1fr);
+    grid-template-areas:
+                        "aside links vale"
+                        "aside links vale"
+                        "aside links vale"
+                        "aside links vale"
+                        "aside links vale"
+                        "aside links vale";
+   
+   }
+
+aside{
+    padding: 0.5em;
+    grid-area: aside;
+    color: aliceblue;
+}
+aside p{
+    margin:0.3em;
+    
+}
+ul{
+    grid-area: links;
+    justify-self: end;
+    align-self: stretch;
+    text-align: end;
+}
+li{ 
+    list-style-type: none;
+}
+ul a{
+    padding: 0.5em;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1em;
+    
+}
+
+ul a:hover{
+    justify-self: end;
+    transition: smooth;
+    transition: 0.3s;
+    font-size: larger;
+}
+
+.vale{
+    grid-area: vale;
+    justify-self: end;
+    width:70%;
+    filter: drop-shadow(0 0 10px rgb(27, 18, 18));
+    transition: all 0.3s;
+    
+    
+}
+
+.vale:hover{
+    
+    transition: all;
+    transition: 1s;
+    width:75%;
+    filter: drop-shadow(0 0 40px rgb(248, 240, 197) );
+}
+
+footer{
+    padding: 0.5em;
+    text-align: center;
+}
