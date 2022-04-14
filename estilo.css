@@ -6,20 +6,19 @@ html{
     font-size: 62.5%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     max-width: 1600px;
-    max-height: 1080px;
-
+    max-height: 900px;
 }
 
 body{
-    
     background: linear-gradient(90deg, rgb(175, 11, 66), rgb(201, 94, 121), rgb(175, 11, 66));
-    /*background: linear-gradient(90deg,  rgb(157, 6, 67, .70),  rgba(249, 225, 235, 0.7),  rgb(157, 6, 67, .70));   */
+    box-sizing: border-box;
 }
 
 header{
     background: linear-gradient(90deg, pink, white, pink);
     /*box-shadow: 2px 2px rgb(51, 10, 44);*/
     border: 5px solid rgb(252, 241, 241, .5);
+    box-sizing: border-box;
     display: flex;
     width: 100vw;
     justify-content: flex-start;
@@ -27,23 +26,23 @@ header{
 }
 h1{
     font-family: 'Kaushan Script', cursive;
-    font-size: 8em ;
+    font-size: 8rem ;
     color: aliceblue;
     text-shadow: 3px 2px 2px rgb(51, 10, 44);
 }
 
 h2{
-    padding-left: 0.4em;
+    padding-left: 0.4rem;
     text-align: center;
     font-family: 'Tangerine', cursive;
-    font-size: 4em ;
+    font-size: 4rem ;
     color: rgb(79, 10, 88);
     text-shadow: 1px 2px 2px rgb(255, 255, 255);
 }
 
 main{
     width: 100%;
-    padding: 0.3em 0px;
+    padding: 0.3rem 0px;
     display: flex;
     justify-content: space-around;
     align-content: stretch;
@@ -53,7 +52,7 @@ main{
 }
 
 aside{
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: aliceblue;
     width: 40vw;
     height: 78vh;/*
@@ -62,7 +61,7 @@ aside{
 aside p{
     border: rgb(79, 10, 88);
     font-family: 'Caveat', cursive;
-    margin:0.5em;
+    margin:1rem;
     text-align: justify;
     color: rgb(220, 206, 210);
     text-shadow: 1px 2px black;
@@ -88,29 +87,43 @@ main li{
     list-style-type: none;
     text-align: right;
     font-family: 'Merienda One', cursive;
+    position: absolute;
+    
+    
 }
 #li1 {
+    right: 26vw;
+    top: 19vh;
     transform: rotate(20deg);
 }
 #li2 {
     transform: rotate(10deg);
-    object-position: 5px 10%;
+    right: 29vw;
+    top: 33vh;
 
 }
 #li3 {
-    transform: rotate(5deg);
+    transform: rotate(6deg);
+    right: 30vw;
+    top: 42vh;
 }
 
 #li4 {
-    transform: rotate(-5deg);
+    transform: rotate(-6deg);
+    right: 30vw;
+    top: 56vh;
 }
 
 #li5 {
     transform: rotate(-10deg);
+    right: 29vw;
+    top: 67vh;
 }
 
 #li6 {
-    transform: rotate(-20deg);
+    transform: rotate(-22deg);
+    right: 26vw;
+    top: 78vh;
 }
 
 ul a{
@@ -118,18 +131,20 @@ ul a{
     text-decoration: none;
     display: inline-block;
     color: aliceblue;
-    font-size: 2em;
+    font-size: 2rem;
     
 }
 
 main ul a:hover{
     transition: all;
     transition: 0.2s;
-    font-size: 2.3em;
+    font-size: 2.3rem;
 }
 
 
 .vale{
+    position: absolute;
+    right: 4vw;
     max-height: 71vh;
     filter: drop-shadow(4px 0px 4px rgb(41, 4, 20));
     transition: all 0.3s;
@@ -155,7 +170,7 @@ footer{
     position: fixed;
     bottom: 0px;
     width: 100%;
-    max-height: 8vh;
+    max-height: 7vh;
     background: linear-gradient(90deg, pink, white, pink);
     
     /*animation: ejemplo 5s linear 1s infinite normal forwards;*/
@@ -170,7 +185,7 @@ footer ul{
 h3{
     color: whitesmoke;
     text-shadow: 2px 2px 4px rgb(45, 5, 50);
-    font-size: 2em;}
+    font-size: 2rem;}
 
 footer ul a{
     align-self: center;
@@ -187,9 +202,45 @@ footer li:after {
     transition: 0.5s opacity;
     color: rgb(79, 10, 88);
     font-size: large;
+    font-weight: bold;
 }
 footer li:hover:after {
     opacity: 1;
 
 }
 
+form{
+    width: 40vw;
+    padding: 5rem;
+    font-size: 2rem;
+    word-spacing: 0.5rem;
+    border-radius: 10px;
+}
+
+.input{
+    border: 0.4rem groove rgb(54, 3, 43);  
+    background-color: rgb(250, 206, 230);
+    border-radius: 4%;
+    height: 2.4rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    box-shadow: inset 0px 0px 0.5rem 0.13rem rgb(166, 26, 98);
+}
+.text-area{
+    border: 0.4rem groove rgb(54, 3, 43); 
+    background-color: rgb(250, 206, 230);
+    border-radius: 4%;
+    margin: 1rem;
+    padding: 0.5rem;
+    box-shadow: inset 0px 0px 0.5rem 0.13rem rgb(166, 26, 98);
+}
+.boton{
+    border: 0.4rem groove rgb(54, 3, 43); 
+    background-color: rgb(250, 206, 230);
+    border-radius: 10%;
+    font-family: 'Caveat', cursive;
+    margin: 1rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+    box-shadow: inset 0px 0px 0.5rem 0.13rem rgb(166, 26, 98);
+}

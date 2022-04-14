@@ -36,32 +36,50 @@
 <body>
     <header>
         <h1 class="animate__animated animate__rubberBand">Valeria Mangano</h1>
-        <h2>Pagina personal</h2>
+        <h2>Formulario</h2>
         <br>
+
     </header>
-    <main> 
-        <aside>
-           <p>Hola! soy Valeria, en este sitio podras encontrar mas informacion sobre mis trabajos, proyectos, hobbies, gustos, redes sociales, y mas... Te invito a descubrir un poco mas sobre mi!</p>
-        </aside>
-        <div class="main1">
-            <ul>
-                <li id="li1"><a href="proyectos.html">Mis proyectos artisticos </a></li>
+
+    <div class="formulario"> 
+
+   
+    <form action="https://formspree.io/f/xvolqqqw" method="post">
+        <label for="Nombre">Nombre</label>
+        <input class="input" type="text" id="Nombre" placeholder="como te llamas?">
+        <hr>
+        <label>Apellido
+            <input class="input" type="text" name="Apellido" placeholder="Cual es tu apellido?" required>
             
-                <li id="li2"> <a href="Bandas.html">Bandas</a></li>
-            
-                <li id="li3"> <a href="producciones.html">Producciones para otros artistas</a></li>
-            
-                <li id="li4"> <a href="Trabajos.html">Trabajos como programadora</a></li>
-            
-                <li id="li5"> <a href="hobbies.html">Hobbies</a></li>
-            
-                <li id="li6"><a href="Biografia.html">Biografia</a></li> 
-            </ul> 
-        </div>    
-        <div class="main2">
-            <img class="vale" src="IMG/vale.png" alt="vale"> 
-        </div>
-    </main>
+        </label>
+        <hr>
+        <label>Email
+            <input class="input" type="email" name="Email" placeholder="tu email">
+        </label>
+        <hr>
+
+        <br>
+        <label">Comentarios:
+        <br>
+            <textarea class="text-area" name="Comentarios"  cols="30" rows="10" placeholder="Halagos y elogios son bienvenidos, insultos en paginas de artistas trap y raegueton por favor!"></textarea>
+    
+        </label>
+        <br>
+        <hr>
+        
+            <label">Nacionalidad:
+                <input class="input" type="text" placeholder="no se vale poner ET">
+            </label>
+    
+<br>
+<br>
+
+        <input class="boton" type="submit" value="Enviar">
+        <input class="boton" type="reset" name="reset">
+
+    </form>
+    </div>
+
     <footer>
        
         <ul>
@@ -83,6 +101,6 @@
         </ul> 
        
        
-    </footer>    
+    </footer> 
 </body>
 </html>
