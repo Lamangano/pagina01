@@ -1,0 +1,219 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 1600px;
+    max-height: 900px;
+}
+
+body{
+    background: linear-gradient(90deg, rgb(175, 11, 66), rgb(201, 94, 121), rgb(175, 11, 66));
+    box-sizing: border-box;
+}
+
+header{
+    background: linear-gradient(90deg, pink, white, pink);
+    box-shadow: 0px 0.5rem 1rem rgb(92, 18, 36);
+    box-sizing: border-box;
+    display: flex;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 8rem ;
+    color: aliceblue;
+    text-shadow: 3px 2px 2px rgb(51, 10, 44);
+}
+
+h2{
+    padding-left: 0.5rem;
+    text-align: center;
+    font-family: 'Caveat', cursive;/*
+    font-family: 'Tangerine', cursive;*/
+    font-size: 3rem;
+    color: rgb(79, 10, 88);
+    text-shadow: 1px 2px 2px rgb(255, 255, 255);
+}
+
+main{
+    width: 100%;
+    height: 79vh;
+    padding: 0.4rem 0px;
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    /*
+    
+    
+    
+    flex-wrap: nowrap;
+                    */
+}
+
+.nav1{
+    width: 30vw;
+    align-self: center;
+    margin:0;
+    
+}
+
+
+.nav1 li{ 
+    list-style-type: none;
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: 2px 2px 4px rgb(45, 5, 50);
+    
+}
+
+
+.nav1 ul a{
+    padding: 2.6rem 2rem;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 2.7rem;
+    display: inline-block;
+    
+}
+hr{
+    color: rgb(253, 222, 235);
+}
+.nav1 ul a:hover{
+    transition: ease-in-out;
+    min-width: 25vw;
+    transition: 0.5s;
+    font-size: 3rem;
+    background-color: rgb(248, 174, 186, 0.3);
+    color: rgb(255, 255, 255);
+    box-shadow: 1rem 1rem 1rem rgb(90, 5, 37);
+    
+    
+}
+
+
+
+.valeimg{
+    width: 25vw;
+    height: 78vh;
+    align-self: center;
+    justify-self: flex-start;
+    
+}
+.vale{
+    max-height: 74vh;
+    margin: 1rem 5rem 1rem 0rem;
+    filter: drop-shadow(4px 0px 4px rgb(41, 4, 20));
+    transition: all 0.3s;
+}
+
+.vale:hover{
+    transition: all;
+    transition: 1s;
+    max-height: 75vh;
+    filter: drop-shadow(0 0 40px rgb(248, 240, 197) );
+}
+
+/*FOOTER*/
+
+footer{
+    
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    max-height: 6vh;
+    background: linear-gradient(90deg, pink, white, pink);
+    box-shadow: 0px -0.5rem 1rem rgb(44, 9, 17);
+    
+}
+
+footer ul{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+h3{
+    color: whitesmoke;
+    text-shadow: 0rem 0.1rem 0.4rem rgb(0, 0, 0);
+    font-size: 2.1rem;
+    margin-top: 1.1rem;
+    
+}
+
+footer ul a{
+    padding: 1rem;
+    color: rgb(79, 10, 88);
+}
+
+footer li{
+    list-style-type: none;
+}
+
+footer a:hover {
+    color: rgb(219, 148, 160);
+  }
+  
+
+footer li:after {
+    content: attr(data-link);
+    opacity: 0;
+    transition: 0.5s opacity;
+    color: rgb(219, 148, 160);
+    font-size: large;
+    font-weight: bold;
+    margin-left: 0.2rem;
+}
+footer li:hover:after {
+    opacity: 1;
+
+}
+
+/* FORMULARIO*/
+
+.formulario{
+    max-inline-size: 76vh;
+    align-self: center;
+    margin: 2rem;
+}
+
+form{
+    
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    word-spacing: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+}
+
+.input{
+    border: 0.4rem groove rgb(54, 3, 43);  
+    background-color: rgb(250, 206, 230);
+    border-radius: 4%;
+    height: 2.4rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    box-shadow: inset 0px 0px 0.5rem 0.13rem rgb(166, 26, 98);
+}
+.text-area{
+    border: 0.4rem groove rgb(54, 3, 43); 
+    background-color: rgb(250, 206, 230);
+    border-radius: 4%;
+    margin: 1rem;
+    padding: 0.5rem;
+    box-shadow: inset 0px 0px 0.5rem 0.13rem rgb(166, 26, 98);
+}
+.boton{
+    border: 0.4rem groove rgb(54, 3, 43); 
+    background-color: rgb(250, 206, 230);
+    border-radius: 10%;
+    font-family: 'Caveat', cursive;
+    margin: 1rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+    box-shadow: inset 0px 0px 0.5rem 0.13rem rgb(166, 26, 98);
+}
+/* FORMULARIO*/
