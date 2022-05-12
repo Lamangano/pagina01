@@ -5,27 +5,32 @@
 html{
     font-size: 62.5%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    max-width: 1600px;
-    max-height: 900px;
+    min-width: 430px;
+    min-height: 530px;
+
 }
 
 body{
     background: linear-gradient(90deg, rgb(175, 11, 66), rgb(201, 94, 121), rgb(175, 11, 66));
+    
     box-sizing: border-box;
 }
 
 header{
     background: linear-gradient(90deg, pink, white, pink);
     box-shadow: 0px 0.5rem 1rem rgb(92, 18, 36);
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
+    width: 100%;
+    
     display: flex;
-    width: 100vw;
+    
     justify-content: flex-start;
     align-items: flex-end;
+    height: 12vh;
 }
 h1{
     font-family: 'Kaushan Script', cursive;
-    font-size: 8rem ;
+    font-size: 7rem ;
     color: aliceblue;
     text-shadow: 3px 2px 2px rgb(51, 10, 44);
 }
@@ -41,51 +46,57 @@ h2{
 }
 
 main{
+    box-sizing: content-box;
     width: 100%;
-    height: 79vh;
+    height: 80vh;
     padding: 0.4rem 0px;
     display: flex;
     justify-content: space-between;
+    
     align-content: stretch;
-    /*
-    
-    
-    
-    flex-wrap: nowrap;
-                    */
+    align-items: stretch;
+    flex-wrap:nowrap;
+                    
 }
 
 .nav1{
     width: 30vw;
-    align-self: center;
     margin:0;
+    height: 80vh;
     
 }
-
+.nav1 ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 .nav1 li{ 
+    z-index: 3;
     list-style-type: none;
     font-family: 'Kaushan Script', cursive;
     text-shadow: 2px 2px 4px rgb(45, 5, 50);
+    
     
 }
 
 
 .nav1 ul a{
-    padding: 2.6rem 2rem;
+    
+    padding: 2rem 2rem;
     text-decoration: none;
     color: aliceblue;
     font-size: 2.7rem;
     display: inline-block;
     
 }
-hr{
-    color: rgb(253, 222, 235);
-}
+
 .nav1 ul a:hover{
     transition: ease-in-out;
     min-width: 25vw;
     transition: 0.5s;
+    padding-left: 1rem;
     font-size: 3rem;
     background-color: rgb(248, 174, 186, 0.3);
     color: rgb(255, 255, 255);
@@ -93,18 +104,16 @@ hr{
     
     
 }
-
-
-
 .valeimg{
-    width: 25vw;
-    height: 78vh;
+    width: 30vw;
+    justify-self: center;
     align-self: center;
-    justify-self: flex-start;
     
 }
 .vale{
-    max-height: 74vh;
+    z-index: 1;
+    max-height: 73vh;
+    min-height: 50vh;
     margin: 1rem 5rem 1rem 0rem;
     filter: drop-shadow(4px 0px 4px rgb(41, 4, 20));
     transition: all 0.3s;
@@ -116,6 +125,7 @@ hr{
     max-height: 75vh;
     filter: drop-shadow(0 0 40px rgb(248, 240, 197) );
 }
+
 
 /*FOOTER*/
 
@@ -131,11 +141,13 @@ footer{
 }
 
 footer ul{
-    
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    
 }
+
 h3{
     color: whitesmoke;
     text-shadow: 0rem 0.1rem 0.4rem rgb(0, 0, 0);
@@ -157,20 +169,89 @@ footer a:hover {
     color: rgb(219, 148, 160);
   }
   
+#chico{
+    font-size: 1.4rem;
+    align-self: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+}  
 
-footer li:after {
+#grande li:after {
     content: attr(data-link);
     opacity: 0;
     transition: 0.5s opacity;
     color: rgb(219, 148, 160);
     font-size: large;
     font-weight: bold;
-    margin-left: 0.2rem;
+    margin-left: 0.5rem;
 }
-footer li:hover:after {
+#grande li:hover:after {
     opacity: 1;
 
 }
+
+@media screen and (max-width:640px) {
+   html{
+    font-size: 40%;
+   }
+   .valeimg{
+       visibility: collapse;
+       width: 0vw;
+   }
+   .vale{
+    visibility: hidden;
+   }
+   .vale:hover{
+    visibility: hidden;
+   }
+   #grande{
+       visibility: hidden;
+       height: 0vh;
+       width: 0vw;
+   }
+   #grande li:after {
+       content: none;
+       font-size: 0;
+   }
+   #f-h3{
+       font-size: 0;
+       visibility: hidden;
+       height: 0vh;
+       width: 0vw;
+   }
+}
+
+
+@media screen and (max-width:1024px) and (min-width:640px) {
+    html{
+
+    font-size: 50%;
+  }
+  .vale{
+    max-height: 52vh;
+}
+.vale:hover{
+    max-height: 55vh;
+}
+  #grande{
+      visibility: hidden;
+      height: 0vh;
+  }
+}
+
+@media screen and (min-width:1024px) {
+    html{
+        font-size: 62.5%;
+    }
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+}
+
+
 
 /* FORMULARIO*/
 

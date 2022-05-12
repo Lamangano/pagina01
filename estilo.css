@@ -5,8 +5,9 @@
 html{
     font-size: 62.5%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /*max-width: 1600px;
-    max-height: 900px;*/
+    min-width: 430px;
+    min-height: 530px;
+
 }
 
 body{
@@ -18,9 +19,11 @@ body{
 header{
     background: linear-gradient(90deg, pink, white, pink);
     box-shadow: 0px 0.5rem 1rem rgb(92, 18, 36);
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
+    width: 100%;
+    
     display: flex;
-    width: 100vw;
+    
     justify-content: flex-start;
     align-items: flex-end;
     height: 12vh;
@@ -47,9 +50,9 @@ main{
     width: 100%;
     height: 80vh;
     padding: 0.4rem 0px;
-    display: flex;
+    display: flex;/*
     justify-content: space-between;
-    /*
+    
     align-content: stretch;
     align-items: stretch;*/
     flex-wrap:nowrap;
@@ -70,7 +73,7 @@ main{
 }
 
 .nav1 li{ 
-    
+    z-index: 3;
     list-style-type: none;
     font-family: 'Kaushan Script', cursive;
     text-shadow: 2px 2px 4px rgb(45, 5, 50);
@@ -103,12 +106,12 @@ main{
 }
 .valeimg{
     width: 30vw;
-    
+    justify-self: center;
     align-self: center;
     
 }
 .vale{
-    
+    z-index: 1;
     max-height: 73vh;
     min-height: 50vh;
     margin: 1rem 5rem 1rem 0rem;
@@ -169,13 +172,14 @@ aside{
 h4{
     animation: opacity 1s ease-in-out 1s infinite normal forwards;
     font-size: 2rem;
-    margin: 0.8rem;
+    margin: 0.2rem;
     font-weight: bolder;
     color: rgb(255, 255, 255);
     text-align: right;
     text-shadow: 0rem 0.2rem 1rem whitesmoke;
     padding: 1rem;
 }
+
 .Novedades p, .Novedades a, .Novedades ul{
     margin: 1rem;
     font-size: 1.7rem;
@@ -207,11 +211,13 @@ footer{
 }
 
 footer ul{
-    
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    
 }
+
 h3{
     color: whitesmoke;
     text-shadow: 0rem 0.1rem 0.4rem rgb(0, 0, 0);
@@ -233,17 +239,24 @@ footer a:hover {
     color: rgb(219, 148, 160);
   }
   
+#chico{
+    font-size: 1.4rem;
+    align-self: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+}  
 
-footer li:after {
+#grande li:after {
     content: attr(data-link);
     opacity: 0;
     transition: 0.5s opacity;
     color: rgb(219, 148, 160);
     font-size: large;
     font-weight: bold;
-    margin-left: 0.2rem;
+    margin-left: 0.5rem;
 }
-footer li:hover:after {
+#grande li:hover:after {
     opacity: 1;
 
 }
@@ -252,18 +265,54 @@ footer li:hover:after {
    html{
     font-size: 40%;
    }
+   .vale{
+       max-height: 45vh;
+   }
+   .vale:hover{
+       max-height: 47vh;
+   }
+   #grande{
+       visibility: hidden;
+       height: 0vh;
+       width: 0vw;
+   }
+   #grande li:after {
+       content: none;
+       font-size: 0;
+   }
+   #f-h3{
+       font-size: 0;
+       visibility: hidden;
+       height: 0vh;
+       width: 0vw;
+   }
 }
+
 
 @media screen and (max-width:1024px) and (min-width:640px) {
     html{
 
-    
     font-size: 50%;
+  }
+  .vale{
+    max-height: 52vh;
+}
+.vale:hover{
+    max-height: 55vh;
+}
+  #grande{
+      visibility: hidden;
+      height: 0vh;
   }
 }
 
 @media screen and (min-width:1024px) {
     html{
         font-size: 62.5%;
+    }
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
     }
 }

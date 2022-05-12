@@ -5,8 +5,8 @@
 html{
     font-size: 62.5%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    max-width: 1600px;/*
-    max-height: 900px;*/
+    min-width: 430px;
+    min-height: 530px;
 }
 
 body{
@@ -14,29 +14,30 @@ body{
     box-sizing: border-box;
 }
 
+
 header{
     background: linear-gradient(90deg, pink, white, pink);
     box-shadow: 0px 0.5rem 1rem rgb(92, 18, 36);
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
+    width: 100%;
+    
     display: flex;
-    width: 100vw;
+    
     justify-content: flex-start;
     align-items: flex-end;
-    height: 14vh;
+    height: 12vh;
 }
 h1{
     font-family: 'Kaushan Script', cursive;
-    font-size: 8rem ;
+    font-size: 7rem ;
     color: aliceblue;
     text-shadow: 3px 2px 2px rgb(51, 10, 44);
 }
 
 h2{
     padding-left: 0.5rem;
-    
-    font-family: 'Caveat', cursive;
-    /*
     text-align: center;
+    font-family: 'Caveat', cursive;/*
     font-family: 'Tangerine', cursive;*/
     font-size: 3rem;
     color: rgb(79, 10, 88);
@@ -44,19 +45,20 @@ h2{
 }
 
 main{
-    position: absolute;
+    box-sizing: content-box;
     width: 100%;
-    height: auto;
+    height: 80vh;
     padding: 0.4rem 0px;
     display: flex;
+    justify-content: space-between;
+    
     align-content: stretch;
     align-items: stretch;
-    flex-wrap: nowrap;              
+    flex-wrap:nowrap;
+                    
 }
 
-
 .nav1{
-    box-sizing: border-box;
     width: 30vw;
     margin:0;
     height: 80vh;
@@ -70,7 +72,7 @@ main{
 }
 
 .nav1 li{ 
-    
+    z-index: 3;
     list-style-type: none;
     font-family: 'Kaushan Script', cursive;
     text-shadow: 2px 2px 4px rgb(45, 5, 50);
@@ -89,17 +91,15 @@ main{
     
 }
 
-
 .nav1 ul a:hover{
     transition: ease-in-out;
     min-width: 25vw;
-    padding-left: 1rem;
     transition: 0.5s;
+    padding-left: 1rem;
     font-size: 3rem;
     background-color: rgb(248, 174, 186, 0.3);
     color: rgb(255, 255, 255);
     box-shadow: 1rem 1rem 1rem rgb(90, 5, 37);
-    
     
     
 }
@@ -123,6 +123,8 @@ h4{
     align-self: center;
 
 }
+/*BIOGRAFIA*/
+
 .bio{
     width: 70vw;
     box-sizing: border-box;
@@ -134,6 +136,7 @@ h4{
     color: antiquewhite;
     font-size: 2rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
 
 }
 .bio img{
@@ -151,13 +154,19 @@ h4{
     
 }
 .grande:active{
-    z-index: 5;
+    z-index: 99;
     position: relative;
     
     box-shadow: 0rem 0rem 0.5rem 0.4rem rgb(255, 249, 240);
+    
+    transform: translateY(0%) scale(1);
     height: 32rem;
     transition: 1s ease-in-out;
 }
+
+/*BIOGRAFIA*/
+
+
 .Trabajos{
     width: 70vw;
     display: flex;
@@ -217,10 +226,13 @@ h5{
     filter: drop-shadow(0 0 40px rgb(248, 240, 197) );
 }
 
+/*HOBBIES*/
+
 .dhobbies{
     width: 65vw;
     padding: 1rem;
     text-align: justify;
+    height: min-content;
 
 }
 .dhobbies li{
@@ -251,23 +263,42 @@ h5{
     background-color: rgb(49, 15, 27, 0.5);
     padding: 1rem;
 }
+/*HOBBIES*/
 
+/*PRODUCCIONES*/
+
+.pdiv{
+    
+    height: fit-content;
+    width: 60vw;
+
+}
+#margen{
+    margin-bottom: 5rem;
+}
 h6{
     font-size: 3rem;
-    
+    text-align: left;
 }
 
 .pdiv li{
     list-style-type: none;
     padding: 1rem;
-    text-decoration: underline;
+    text-decoration: none;
     word-spacing: 0.5rem;
-    text-align: left;
+    
+    
 }
 .pdiv iframe {
     width: 45rem;
     height: 30rem;
+    border: 0.4rem inset rgba(247, 222, 229, 0.6);
+    margin-bottom: 2rem;
+    
+    
 }
+/*PRODUCCIONES*/
+
 
 /*FOOTER*/
 
@@ -276,18 +307,20 @@ footer{
     position: fixed;
     bottom: 0px;
     width: 100%;
-    height: 6vh;
+    max-height: 6vh;
     background: linear-gradient(90deg, pink, white, pink);
     box-shadow: 0px -0.5rem 1rem rgb(44, 9, 17);
     
 }
 
 footer ul{
-    
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    
 }
+
 h3{
     color: whitesmoke;
     text-shadow: 0rem 0.1rem 0.4rem rgb(0, 0, 0);
@@ -305,44 +338,84 @@ footer li{
     list-style-type: none;
 }
 
-footer li:after {
+footer a:hover {
+    color: rgb(219, 148, 160);
+  }
+  
+#chico{
+    font-size: 1.4rem;
+    align-self: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+}  
+
+#grande li:after {
     content: attr(data-link);
     opacity: 0;
     transition: 0.5s opacity;
     color: rgb(219, 148, 160);
     font-size: large;
     font-weight: bold;
-    margin-left: 0.2rem;
+    margin-left: 0.5rem;
 }
-footer li:hover:after {
+#grande li:hover:after {
     opacity: 1;
 
 }
 
-footer a:hover {
-    color: rgb(161, 81, 94);
-  }
-
-
-/*FOOTER FIN*/
-
 @media screen and (max-width:640px) {
-    html{
-     font-size: 36%;
-    }
-    
-}
- 
- @media screen and (max-width:1024px) and (min-width:640px) {
-     html{
- 
-     
-     font-size: 50%;
+   html{
+    font-size: 40%;
    }
- }
- 
- @media screen and (min-width:1024px) {
-     html{
-         font-size: 62.5%;
-     }
- }
+   .vale{
+       max-height: 45vh;
+   }
+   .vale:hover{
+       max-height: 47vh;
+   }
+   #grande{
+       visibility: hidden;
+       height: 0vh;
+       width: 0vw;
+   }
+   #grande li:after {
+       content: none;
+       font-size: 0;
+   }
+   #f-h3{
+    font-size: 0;
+    visibility: hidden;
+    height: 0vh;
+    width: 0vw;
+}
+}
+
+
+@media screen and (max-width:1024px) and (min-width:640px) {
+    html{
+
+    font-size: 50%;
+  }
+  .vale{
+    max-height: 52vh;
+}
+.vale:hover{
+    max-height: 55vh;
+}
+  #grande{
+      visibility: hidden;
+      height: 0vh;
+  }
+}
+
+@media screen and (min-width:1024px) {
+    html{
+        font-size: 62.5%;
+    }
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+}
