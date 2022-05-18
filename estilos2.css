@@ -5,7 +5,7 @@
 html{
     font-size: 62.5%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    min-width: 430px;
+    min-width: 280px;
     min-height: 530px;
 }
 
@@ -14,6 +14,7 @@ body{
     box-sizing: border-box;
 }
 
+/*HEADER*/
 
 header{
     background: linear-gradient(90deg, pink, white, pink);
@@ -44,6 +45,8 @@ h2{
     text-shadow: 1px 2px 2px rgb(255, 255, 255);
 }
 
+/*HEADER*/
+
 main{
     box-sizing: content-box;
     width: 100%;
@@ -57,6 +60,7 @@ main{
     flex-wrap:nowrap;
                     
 }
+/*MENU*/
 
 .nav1{
     width: 30vw;
@@ -72,7 +76,7 @@ main{
 }
 
 .nav1 li{ 
-    z-index: 3;
+    z-index: 10;
     list-style-type: none;
     font-family: 'Kaushan Script', cursive;
     text-shadow: 2px 2px 4px rgb(45, 5, 50);
@@ -103,6 +107,7 @@ main{
     
     
 }
+/*MENU*/
 
 h4{
     font-size: 4rem;
@@ -128,7 +133,7 @@ h4{
 .bio{
     width: 70vw;
     box-sizing: border-box;
-    padding: 0rem 6rem 0rem 1rem;
+    padding: 0rem 2rem;
 }
 .bio p{
     
@@ -153,7 +158,9 @@ h4{
     
     
 }
+
 .grande:active{
+    
     z-index: 99;
     position: relative;
     
@@ -166,6 +173,7 @@ h4{
 
 /*BIOGRAFIA*/
 
+/*TRABAJOS*/
 
 .Trabajos{
     width: 70vw;
@@ -183,6 +191,10 @@ h4{
     
     width: 10rem;
 }
+
+/*TRABAJOS*/
+
+/*PROYECTOS*/
 
 h5{
     font-size: 4rem;
@@ -205,26 +217,10 @@ h5{
     padding: 0.5rem 0.3rem;
 }
 
-.valeimg{
-    width: 25vw;
-    height: 78vh;
-    align-self: center;
-    justify-self: flex-start;
-    
-}
-.vale{
-    max-height: 74vh;
-    margin: 1rem 5rem 1rem 0rem;
-    filter: drop-shadow(4px 0px 4px rgb(41, 4, 20));
-    transition: all 0.3s;
-}
+/*PROYECTOS*/
 
-.vale:hover{
-    transition: all;
-    transition: 1s;
-    max-height: 75vh;
-    filter: drop-shadow(0 0 40px rgb(248, 240, 197) );
-}
+
+
 
 /*HOBBIES*/
 
@@ -246,6 +242,7 @@ h5{
     height: 25rem;
     margin: 1rem;
     border: 0.1rem solid whitesmoke;
+
 }
 .galeria{
     margin: 1rem;
@@ -364,38 +361,91 @@ footer a:hover {
 
 }
 
-@media screen and (max-width:640px) {
-   html{
-    font-size: 40%;
-   }
-   .vale{
-       max-height: 45vh;
-   }
-   .vale:hover{
-       max-height: 47vh;
-   }
-   #grande{
-       visibility: hidden;
-       height: 0vh;
-       width: 0vw;
-   }
-   #grande li:after {
-       content: none;
-       font-size: 0;
-   }
-   #f-h3{
-    font-size: 0;
-    visibility: hidden;
-    height: 0vh;
-    width: 0vw;
-}
+/*MEDIA QUERIES*/
+
+@media screen and (max-width:430px) {
+    html{
+        font-size: 30%;
+       }
+    h1{
+        font-size:  5rem;
+        padding: 1rem;
+       }
+       
+    .nav1{
+        width: 25vw;
+    }
+    .bio{
+        width: fit-content;
+    }
+    .galeria{
+        width: fit-content;
+    }
+    .uhobbies img{
+        text-align: center;
+        height: 20rem;
+    }
+    p.div{
+        width: 75vw;
+    }
+    .pdiv iframe {
+        width: 30rem;
+        height: 20rem;
+
+    }
+   
+
+    #grande{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+    #grande li:after {
+        content: none;
+        font-size: 0;
+    }
+    #f-h3{
+        font-size: 0;
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+  
 }
 
 
-@media screen and (max-width:1024px) and (min-width:640px) {
+@media screen and (max-width:639px) and (min-width:430px) {
+    html{
+     font-size: 40%;
+    }
+    .vale{
+        max-height: 45vh;
+    }
+    .vale:hover{
+        max-height: 47vh;
+    }
+    #grande{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+    #grande li:after {
+        content: none;
+        font-size: 0;
+    }
+    #f-h3{
+        font-size: 0;
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+ }
+
+
+@media screen and (max-width:1023px) and (min-width:640px) {
     html{
 
-    font-size: 50%;
+    font-size: 48%;
   }
   .vale{
     max-height: 52vh;
@@ -409,7 +459,17 @@ footer a:hover {
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (max-width:1439px) and (min-width:1024px) {
+    html{
+        font-size: 52%;
+    }
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+}
+@media screen and (max-width:1440px) and (min-width:1820px) {
     html{
         font-size: 62.5%;
     }
@@ -419,3 +479,17 @@ footer a:hover {
         width: 0vw;
     }
 }
+
+@media screen and (min-width:1820px) {
+    html{
+        font-size: 80%;
+    }
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+}
+
+
+/*MEDIA QUERIES*/

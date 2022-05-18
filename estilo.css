@@ -5,7 +5,7 @@
 html{
     font-size: 62.5%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    min-width: 430px;
+    min-width: 280px;
     min-height: 530px;
 
 }
@@ -15,6 +15,8 @@ body{
     
     box-sizing: border-box;
 }
+
+/*HEADER*/
 
 header{
     background: linear-gradient(90deg, pink, white, pink);
@@ -45,19 +47,23 @@ h2{
     text-shadow: 1px 2px 2px rgb(255, 255, 255);
 }
 
+/*HEADER*/
+
 main{
     box-sizing: content-box;
-    width: 100%;
+    width: min-content;
     height: 80vh;
     padding: 0.4rem 0px;
-    display: flex;/*
+    display: flex;
     justify-content: space-between;
     
     align-content: stretch;
-    align-items: stretch;*/
-    flex-wrap:nowrap;
+    align-items: stretch;
+    flex-wrap: nowrap;
                     
 }
+
+/*MENU*/
 
 .nav1{
     width: 30vw;
@@ -104,7 +110,10 @@ main{
     
     
 }
+/*MENU*/
+
 .valeimg{
+    
     width: 30vw;
     justify-self: center;
     align-self: center;
@@ -137,6 +146,7 @@ aside{
 }
 
 .presentacion{
+    z-index: 50;
     font-size: 2.7rem;
     color: aliceblue;
     font-family: 'Caveat', cursive;
@@ -153,6 +163,7 @@ aside{
     to{opacity: 1;}
 }
 .Novedades{
+    z-index: 50;
     width: 25vw;
     margin:0px;
     padding: 0rem;
@@ -221,8 +232,8 @@ footer ul{
 h3{
     color: whitesmoke;
     text-shadow: 0rem 0.1rem 0.4rem rgb(0, 0, 0);
-    font-size: 2.1rem;
-    margin-top: 1.1rem;
+    font-size: 2.2rem;
+    margin-top: 1.6rem;
     
 }
 
@@ -261,12 +272,187 @@ footer a:hover {
 
 }
 
-@media screen and (max-width:640px) {
+
+/*MEDIA QUERIES*/
+
+
+@media screen and (max-width:430px) {
+    html{
+        font-size: 25%;
+       }
+
+       .vale{
+        max-height: 22vh;
+        
+        
+    }
+    h1{
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+    .vale:hover{
+        max-height: 27vh;
+    }
+    .nav1{
+        width: 25vw;
+    }
+   
+    .presentacion{
+        margin: 0.2rem;
+    }
+    h4{
+        padding: 0rem;
+    }
+
+    #grande{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+    #grande li:after {
+        content: none;
+        font-size: 0;
+    }
+    #f-h3{
+        font-size: 0;
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+  
+}
+@media screen and (max-width:430px) and (orientation:portrait) {
+    html{
+        font-size: 25%;
+       }
+
+       .vale{
+        max-height: 22vh;
+        
+        
+    }
+    h1{
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+    .vale:hover{
+        max-height: 27vh;
+    }
+    .nav1{
+        width: 25vw;
+    }
+   
+    .presentacion{
+        margin: 0.2rem;
+    }
+    h4{
+        padding: 0rem;
+    }
+
+    #grande{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+    #grande li:after {
+        content: none;
+        font-size: 0;
+    }
+    #f-h3{
+        font-size: 0;
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+  
+}
+
+
+@media screen and (max-width:430px) and (orientation:landscape) {
+    html{
+        font-size: 15%;
+       }
+
+       .vale{
+        max-height: 30vh;
+        
+    }
+    h1{
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+    .vale:hover{
+        max-height: 33vh;
+    }
+    .nav1{
+        width: 25vw;
+        
+    }
+    .nav1 ul a{
+        font-size: 0.5rem;
+        padding: 1rem;
+    }
+   
+    .presentacion{
+        margin: 0.2rem;
+    }
+    h4{
+        padding: 0rem;
+    }
+
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+  
+}
+
+@media screen and (max-width:639px) and (min-width:430px) {
+
+    html{
+     font-size: 40%;
+    }
+    
+    .vale{
+        max-height: 45vh;
+        position: sticky;
+        top:50%;
+        left:50%;
+    }
+    .vale:hover{
+        max-height: 47vh;
+    }
+    #grande{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+    #grande li:after {
+        content: none;
+        font-size: 0;
+    }
+    #f-h3{
+        font-size: 0;
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+ }
+@media screen and (max-width:639px) and (min-width:430px) and (orientation:portrait) {
+
    html{
     font-size: 40%;
    }
+   
    .vale{
        max-height: 45vh;
+       position: sticky;
+       top:50%;
+       left:50%;
    }
    .vale:hover{
        max-height: 47vh;
@@ -288,11 +474,33 @@ footer a:hover {
    }
 }
 
+@media screen and (max-width:639px) and (min-width:430px) and (orientation:landscape) {
+    html{
+     font-size: 30%;
+    }
+    .vale{
+        max-height: 48vh;
+    }
+    .vale:hover{
+        max-height: 50vh;
+    }
+    
+    .nav1 ul a{
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+  
+ }
 
-@media screen and (max-width:1024px) and (min-width:640px) {
+ @media screen and (max-width:1023px) and (min-width:640px) {
     html{
 
-    font-size: 50%;
+    font-size: 48%;
   }
   .vale{
     max-height: 52vh;
@@ -304,9 +512,76 @@ footer a:hover {
       visibility: hidden;
       height: 0vh;
   }
+  #grande li:after {
+    content: none;
+    font-size: 0;
+}
+#f-h3{
+    font-size: 0;
+    visibility: hidden;
+    height: 0vh;
+    width: 0vw;
+}
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (max-width:1023px) and (min-width:640px) and (orientation:portrait) {
+    html{
+
+    font-size: 48%;
+  }
+  .vale{
+    max-height: 52vh;
+}
+.vale:hover{
+    max-height: 55vh;
+}
+  #grande{
+      visibility: hidden;
+      height: 0vh;
+  }
+  #grande li:after {
+    content: none;
+    font-size: 0;
+}
+#f-h3{
+    font-size: 0;
+    visibility: hidden;
+    height: 0vh;
+    width: 0vw;
+}
+}
+
+@media screen and (max-width:1023px) and (min-width:640px) and (orientation:landscape) {
+    html{
+
+    font-size: 48%;
+  }
+  .vale{
+    max-height: 52vh;
+}
+.vale:hover{
+    max-height: 55vh;
+}
+#chico{
+    visibility: hidden;
+    height: 0vh;
+    width: 0vw;
+}
+
+}
+
+@media screen and (max-width:1439px) and (min-width:1024px) {
+    html{
+        font-size: 52%;
+    }
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+}
+
+@media screen and (max-width:1440px) and (min-width:1819px) {
     html{
         font-size: 62.5%;
     }
@@ -316,3 +591,15 @@ footer a:hover {
         width: 0vw;
     }
 }
+
+@media screen and (min-width:1820px) {
+    html{
+        font-size: 80%;
+    }
+    #chico{
+        visibility: collapse;
+    }
+}
+
+
+/*MEDIA QUERIES*/

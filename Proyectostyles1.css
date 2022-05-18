@@ -1,0 +1,423 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+body{
+    background: linear-gradient(90deg, rgb(175, 11, 66), rgb(201, 94, 121), rgb(175, 11, 66));
+    box-sizing: border-box;
+}
+
+/*HEADER*/
+
+header{
+    background: linear-gradient(90deg, pink, white, pink);
+    box-shadow: 0px 0.5rem 1rem rgb(92, 18, 36);
+    box-sizing: border-box;
+    
+    width: 100%;
+    
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 12vh;
+}
+h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 7rem ;
+    
+    color: aliceblue;
+    text-shadow: 3px 2px 2px rgb(51, 10, 44);
+}
+
+h2{
+    padding-left: 0.5rem;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    color: rgb(79, 10, 88);
+    text-shadow: 1px 2px 2px rgb(255, 255, 255);
+}
+
+/*HEADER*/
+
+main{
+    box-sizing: content-box;
+    width: 100%;
+    height: auto;
+    padding: 0.4rem 0px;
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch; 
+    align-items: stretch;
+    flex-wrap:nowrap;
+                
+}
+
+/*MENU*/
+
+.nav1{
+    width: 30vw;
+    margin:0;
+    height: 80vh;
+    
+}
+.nav1 ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav1 li{ 
+    z-index: 3;
+    list-style-type: none;
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: 2px 2px 4px rgb(45, 5, 50);
+    
+    
+}
+
+
+.nav1 ul a{
+    
+    padding: 2rem 2rem;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 2.7rem;
+    display: inline-block;
+    
+}
+
+.nav1 ul a:hover{
+    transition: ease-in-out;
+    min-width: 25vw;
+    transition: 0.5s;
+    padding-left: 1rem;
+    font-size: 3rem;
+    background-color: rgb(248, 174, 186, 0.3);
+    color: rgb(255, 255, 255);
+    box-shadow: 1rem 1rem 1rem rgb(90, 5, 37);
+    
+    
+}
+
+/*MENU*/
+
+
+
+/*PROYECTOS*/
+
+.cuerpo{
+    align-self: center;
+    margin: 1.5rem;
+    width: min-content;
+    height: max-content;
+    box-sizing: border-box;
+    font-size: 2rem;
+    
+
+
+}
+
+
+
+
+h5{
+    font-size: 4rem;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.carousel-item ul{
+    display: inline;
+}
+.carousel-item p {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+}
+.carousel-item li, .carousel-item a {
+    text-decoration: none;
+    display: inline;
+    color: aliceblue;
+    padding: 0.5rem 0.3rem;
+    
+}
+
+/*PROYECTOS*/
+
+
+
+
+
+
+/*FOOTER*/
+
+footer{
+    
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    max-height: 6vh;
+    background: linear-gradient(90deg, pink, white, pink);
+    box-shadow: 0px -0.5rem 1rem rgb(44, 9, 17);
+    
+}
+
+footer ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+h3{
+    color: whitesmoke;
+    text-shadow: 0rem 0.1rem 0.4rem rgb(0, 0, 0);
+    font-size: 2.1rem;
+    margin-top: 1.5rem;
+    
+}
+
+footer ul a{
+    padding: 1rem;
+    color: rgb(79, 10, 88);
+}
+
+footer li{
+    list-style-type: none;
+}
+
+footer a:hover {
+    color: rgb(219, 148, 160);
+  }
+  
+#chico{
+    font-size: 1.4rem;
+    align-self: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+}  
+
+#grande li:after {
+    content: attr(data-link);
+    opacity: 0;
+    transition: 0.5s opacity;
+    color: rgb(219, 148, 160);
+    font-size: large;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+#grande li:hover:after {
+    opacity: 1;
+
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width:430px) {
+    html{
+        font-size: 30%;
+       }
+    h1{
+        font-size:  4rem;
+        padding: 1rem;
+       }
+       
+    .nav1{
+        width: 25vw;
+    }
+   
+   
+
+    #grande{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+    #grande li:after {
+        content: none;
+        font-size: 0;
+    }
+    #f-h3{
+        font-size: 0;
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+  
+}
+
+@media screen and (max-width:430px) and (orientation:portrait) {
+    html{
+        font-size: 40%;
+       }
+    h1{
+        font-size:  4rem;
+        padding: 1rem;
+       }
+       
+    .main{
+        flex-direction: column-reverse;
+        height: max-content;
+        width: 100%;
+    }   
+    .nav1{
+        width: 45vw;
+    }
+   
+   #texto{
+       font-size: 0.5rem;
+
+   }
+
+    #grande{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+    #grande li:after {
+        content: none;
+        font-size: 0;
+    }
+    #f-h3{
+        font-size: 0;
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+
+}
+
+@media screen and (max-width:639px) and (min-width:430px) {
+    html{
+     font-size: 40%;
+    }
+ 
+    #grande{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+    #grande li:after {
+        content: none;
+        font-size: 0;
+    }
+    #f-h3{
+        font-size: 0;
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+ }
+
+ @media screen and (max-width:639px) and (min-width:430px) and (orientation:portrait) {
+    html{
+     font-size: 40%;
+    }
+    main{
+        flex-direction: column-reverse;
+        height: max-content;
+        width: 100vw;
+        overflow: hidden;
+    }   
+    .nav1{
+        width: auto;
+    }
+   
+
+   .cuerpo{
+       width: auto;
+       height: 50%;
+       box-sizing: border-box;
+       font-size: 1rem;
+   }
+   #perfiles{
+       margin: 0%;
+       width: max-content;
+       height: fit-content;
+   }
+
+    #grande{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+    #grande li:after {
+        content: none;
+        font-size: 0;
+    }
+    #f-h3{
+        font-size: 0;
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+ }
+
+
+@media screen and (max-width:1023px) and (min-width:640px) {
+    html{
+
+    font-size: 48%;
+  }
+
+  #grande{
+      visibility: hidden;
+      height: 0vh;
+  }
+}
+@media screen and (max-width:1023px) and (min-width:640px) and (orientation:landscape) {
+    html{
+
+    font-size: 38%;
+  }
+
+  #grande{
+      visibility: hidden;
+      height: 0vh;
+  }
+}
+
+@media screen and (max-width:1439px) and (min-width:1024px) {
+    html{
+        font-size: 52%;
+    }
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+}
+@media screen and (max-width:1440px) and (min-width:1820px) {
+    html{
+        font-size: 62.5%;
+    }
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+}
+
+@media screen and (min-width:1820px) {
+    html{
+        font-size: 80%;
+    }
+    #chico{
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
+    }
+}
+
+
+/*MEDIA QUERIES*/

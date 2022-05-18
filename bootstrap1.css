@@ -5977,6 +5977,12 @@ textarea.form-control-lg {
   width: 100%;
   overflow: hidden;
 }
+
+@media screen and (max-width:430px) and (orientation:portrait) {
+  .carousel-inner {
+    overflow:visible;
+  }
+}
 .carousel-inner::after {
   display: block;
   clear: both;
@@ -6006,6 +6012,7 @@ textarea.form-control-lg {
 }
 
 /* rtl:begin:ignore */
+
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
   transform: translateX(100%);
@@ -6047,9 +6054,6 @@ textarea.form-control-lg {
   top: 0;
   bottom: 0;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 15%;
   padding: 0;
   color: #fff;
@@ -6115,8 +6119,7 @@ textarea.form-control-lg {
   bottom: 0;
   left: 0;
   z-index: 2;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   padding: 0;
   margin-right: 15%;
   margin-bottom: 0.6rem;
