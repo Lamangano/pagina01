@@ -114,6 +114,25 @@ main{
 
 /*PROYECTOS*/
 
+#proinfo{
+    
+    padding: 1rem;
+    margin-bottom: 7rem;
+    text-align: center;
+    color: rgb(46, 1, 15);
+}
+
+#proinfo ul li, #proinfo a{
+    display: inline;
+    padding: 1rem;
+    text-align: center;
+    color: rgb(46, 1, 15);
+}
+
+#proinfo p {
+    font-size: 2rem;
+}
+
 .cuerpo{
     align-self: center;
     margin: 1.5rem;
